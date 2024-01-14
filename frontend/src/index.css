@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap'); 
+
+
+
+ 
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ 
+
+label {
+  font-size: 1.2rem;
+  color: #656262;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+
+  background: #ededed;
+  font-family: "Poppins", sans-serif;
+}
+
+.form_container {
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  position:absolute;
+  left:45rem;
+  top:9rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+  
+}
+
+.form_container > h2 {
+  font-family: 'oswald';
+  font-weight: 400;
+  margin-block: 1rem;
+  padding-block: 0.6rem;
+  color:  rgb(41, 112, 255);
+}
+
+.form_container > form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.form_container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.form_container label{
+  font-family: 'oswald';
+ 
+}
+.form_container span{
+  font-family: 'oswald';
+ 
+}
+.form_container input {
+  font-family: 'oswald';
+  color:#1b1b1b;
+  border: none;
+  padding: 0.5rem;
+  border: 1px solid rgb(116, 116, 116);
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.form_container input::placeholder {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.form_container button {
+  background-color:  rgb(41, 112, 255);
+  color: #fff;
+  border: none;
+  padding: 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+span a {
+  text-decoration: none;
+  color:  rgb(41, 112, 255);
+  font-family: 'oswald';
+}
+
+
+ 
+
+/*Home Page*/
+
+    .name{
+      position:absolute;
+      top:3rem;
+      left:43.5rem;
+      text-align: center;
+      width:35%;
+      font-family: 'Oswald', sans-serif; 
+      color:  rgb(41, 112, 255); 
+      font-weight: bolder; 
+      font-size: 5rem; 
+      margin-top:2rem;
+     
+    }
+    
+    
+   
+  .about{
+    position:absolute;
+    top:20rem;
+    left:50rem;
+    text-align: center;
+    width:20%;
+    font-family: 'Poppins', sans-serif; 
+    color:  rgb(0, 0, 0);  
+    font-size: 1rem;
+    margin-top:2rem;
+  }
+  .btn-home{
+    position:absolute;
+    background-color:  rgb(41, 112, 255);
+    top:35rem;
+    left:52.25rem;
+    text-align: center;
+    width:15%;
+    height: 2.5rem;
+    font-family: 'Poppins', sans-serif; 
+    border-radius: 0.3rem;
+    color: rgb(255, 255, 255); 
+    font-weight: bolder; 
+    font-size: 1.3rem; 
+    margin-top:2rem;
+  }
+
+  .home-Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    z-index: -1;
+  }
+
+  .right-Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    z-index: -1;
+  }
+
+  /*profile photo*/
+  
+
+
+
+  .selected-profile-image{
+    position:absolute;
+    top:2rem;
+    left:10.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+
+
+
+

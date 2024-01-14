@@ -1,0 +1,92 @@
+.error-message {
+  color: #ff0000;
+}
+
+.profileSection {
+  margin-top: 7rem;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+
+
+.profilePhoto {
+  width: 20%;
+  object-fit: cover; 
+  border-radius: 50% ; 
+  border:solid 0.2rem rgb(71, 71, 71);
+}
+
+.profileDetails p{
+  font-family:'oswald';
+  margin-top: 0.2rem;
+}
+
+.editButton {
+  background-color: rgb(41, 112, 255);
+  height: 2.5rem;
+  width: 30%;
+  font-family: 'Oswald', sans-serif;
+  border-radius: 0.3rem;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.editButton:hover {
+  background-color: rgb(61, 132, 255);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.popupForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border:solid 0.1rem rgb(177, 177, 177);
+  border-radius: 3%;
+}
+
+.popupForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'oswald';
+}
+
+.popupForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.popupForm button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.popupForm button:hover {
+  background-color: #0056b3;
+}
+
+
+.line{
+  color:#b7b7b7
+}
+
+.closeButton{
+  border-radius: 5%;
+}
+.submitButton{
+  border-radius: 5%;
+}

@@ -1,0 +1,30 @@
+.viewApplicantsContainer ul {
+  margin-top: 200px;
+}
+
+.errorMessage {
+  color: red;
+}
+
+.applicantsContainer {
+  margin-top: 20px;
+}
+
+.applicantsList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.applicantItem {
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex; /* Add this line */
+  flex-direction: column; /* Add this line */
+  justify-content: space-between; /* Add this line */
+}
+
+
+
+/* Add more styles as needed */
