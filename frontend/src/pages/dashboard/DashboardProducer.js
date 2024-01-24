@@ -269,9 +269,14 @@ const DashboardProducer = () => {
 
 
   const handleDeleteJob = async (jobId) => {
+    const token = sessionStorage.getItem('token');
+
     try {
       const response = await axios.delete(`http://localhost:8001/jobs/deletejob/${jobId}`, {
-        withCredentials: true,
+        headers: {
+          Authorization: `Bearer ${token}`
+        },
+        withCredentials: true
       });
 
       const { success, message } = response.data;

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import styles from './Profile.module.css';
 import Navbar from '../../components/navbar/NavbarProducer';
-import Avatar from '@mui/material/Avatar';
+// import Avatar from '@mui/material/Avatar';
 
 const ProfileProducer = () => {
     const [profileData, setProfileData] = useState({});
@@ -17,7 +17,6 @@ const ProfileProducer = () => {
     const [inputValue, setInputValue] = useState({
     
       username: "",
-      profileImage: null,
       contact:"",
     });
 
@@ -47,7 +46,6 @@ const ProfileProducer = () => {
 
 
             await fetchProducerProfile();
-            // Refresh profile data
           } else {
             console.error("Server response error:", response.data);
           }
@@ -76,7 +74,7 @@ const ProfileProducer = () => {
       
           if (response.data.success) {
             console.log("Fetched producer profile successfully:", response.data);
-            const producerProfileData = response.data.profile; // Adjust the property name based on your API response
+            // const producerProfileData = response.data.profile; 
           } else {
             console.error("Server response error:", response.data);
           }
@@ -105,7 +103,7 @@ const ProfileProducer = () => {
             const { success, profile } = data;
             if (success) {
               setProfileData(profile);
-              setProducerProfileData(profile); // Set the producer profile data
+              setProducerProfileData(profile); 
             } else {
               setError("Failed to fetch profile data");
               console.error("Server response error:", data);
@@ -120,32 +118,27 @@ const ProfileProducer = () => {
       }, []);
       
 
-      const handlePhoto = () => {
-        // Create a hidden input element
-        const input = document.createElement("input");
-        input.type = "file";
-        input.accept = "image/*"; // Specify accepted file types (e.g., images)
-        input.style.display = "none";
+      // const handlePhoto = () => {
+      //   const input = document.createElement("input");
+      //   input.type = "file";
+      //   input.style.display = "none";
       
-        // Attach an event listener to handle file selection
-        input.addEventListener("change", () => {
-          const selectedFile = input.files[0];
+      //   input.addEventListener("change", () => {
+      //     const selectedFile = input.files[0];
       
-          if (selectedFile) {
-            setInputValue({
-              ...inputValue,
-              profileImage: selectedFile,
-            });
-          }
-        });
+      //     if (selectedFile) {
+      //       setInputValue({
+      //         ...inputValue,
+      //         profileImage: selectedFile,
+      //       });
+      //     }
+      //   });
       
-        // Trigger a click event on the hidden input
-        document.body.appendChild(input); // Append input to the DOM
-        input.click(); // Trigger the click event
+      //   document.body.appendChild(input); 
+      //   input.click(); 
       
-        // Remove the input element from the DOM after the user selects a file
-        input.remove();
-      };
+      //   input.remove();
+      // };
 
       
       return (
@@ -158,7 +151,6 @@ const ProfileProducer = () => {
                 {console.log(producerProfileData)}
                  
                 <div className={styles.profileDetails}>
-                <p>{producerProfileData.profileImage}</p>
                 <p>Email: { profileData.email}</p>
                 <p>UserName: {producerProfileData.username}</p>
                 <p>Contact: {producerProfileData.contact}</p>
@@ -167,13 +159,7 @@ const ProfileProducer = () => {
                 <div className={styles.popupForm}>
                    
                   <form onSubmit={handleFormSubmit}>
-                    <label>
-                        <img
-                          src={producerProfileData.profileImage}
-                          alt="Profile"
-                          className={styles.profilePhoto}
-                        />
-                    </label>
+                    
                     <label>
                       Contact:
                       <input type="text" value={contact} onChange={(e) => setcontact(e.target.value)} />

@@ -1,7 +1,12 @@
 .viewApplicantsContainer ul {
   margin-top: 200px;
-}
+  width:20%;
 
+
+}
+.viewApplicantsContainer{
+ margin-left:40rem;
+}
 .errorMessage {
   color: red;
 }
@@ -10,21 +15,30 @@
   margin-top: 20px;
 }
 
-.applicantsList {
-  list-style-type: none;
-  padding: 0;
+.applicantsContainer h2 {
+font-family: 'oswald';
+font-weight: 400;
 }
 
-.applicantItem {
-  background-color: #f5f5f5;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex; /* Add this line */
-  flex-direction: column; /* Add this line */
-  justify-content: space-between; /* Add this line */
+.applicantsContainer p {
+  font-family: 'oswald';
+  font-weight: 200;
+}
+
+.applicantsContainer .acceptButton {
+  font-family: 'oswald';
+  font-weight: 400;
+  background-color:green;
+  color:white;
+}
+.applicantsContainer .rejectButton{
+  font-family: 'oswald';
+  font-weight: 400;
+  background-color:red;
+  color:white;
 }
 
 
 
-/* Add more styles as needed */
+
+
