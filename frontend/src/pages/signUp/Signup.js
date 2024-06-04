@@ -42,11 +42,7 @@ const Signup = () => {
       const { success , message  ,token , user} = data;
 
       if (success) {
-        if(role === "freelancer"){
-          localStorage.setItem('_id', user._id);
-
-        }
-         // Store the token in the session storage
+        localStorage.setItem('_id', user._id);
         sessionStorage.setItem('token', token);
         handleSuccess(message);
         setTimeout(() => {

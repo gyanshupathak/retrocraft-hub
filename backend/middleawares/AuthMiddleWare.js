@@ -2,9 +2,10 @@ const jwt = require("jsonwebtoken");
 const { User } = require("../models/UserModels");
 
 module.exports.userVerification = async (req, res, next) => {
-  const token = req.headers.authorization ? req.headers.authorization.split(' ')[1] : null;
+  const token = req.headers.authorization
+    ? req.headers.authorization.split(" ")[1]
+    : null;
   if (!token) {
-    console.log("No token found");
     // Redirect to the unauthorized page with a message
     return res.status(401).json({ message: "Unauthorized" });
   }

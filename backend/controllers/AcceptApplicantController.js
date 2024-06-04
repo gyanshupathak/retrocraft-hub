@@ -32,6 +32,25 @@ module.exports.AcceptApplicant = async (req, res) => {
     }
   };
 
+  module.exports.RejectApplicant = async (req, res) => {
+    const { applicantId } = req.params;
+    const { jobId } = req.body;
+  
+    try {
+      // Find the application and update its status
+      const application = await AppliedJobModel.findOneAndUpdate(
+        { _id: applicantId, jobId },
+        { status: 'Rejected' },
+        { new: true }
+      );
+  
+      res.json({ success: true, message: 'Applicant rejected successfully.' });
+    } catch (error) {
+      console.error('Error accepting applicant:', error);
+      res.json({ success: false, message: 'An error occurred while rejecting the applicant.' });
+    }
+  };
+
 
 
   module.exports.GetAcceptedJobs = async (req, res) => {

@@ -106,93 +106,56 @@
         bottom:2rem;
         right:2rem;
         color: #ffffff;
-        background: rgb(41, 112, 255);
+        background: #283140;
         padding: 10px;
         margin: 10px;
         border-radius: 50rem;
         }
+ 
+          .buttonPrimary{
+            background-color: #283140 !important;
+            color: white;
+          }
 
-        
-        .cardsContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
-            padding: 20px;
-            margin-top:100px;
-          }
-          
-          .cards {
-            background-color:#ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            transition: transform 0.3s ease-in-out;
-            overflow: hidden;
-          }
-          
-          
-          
-          .cards h3 {
-            margin: 10px 0;
-            font-size: 1rem;
-            color: #000000;
-          }
-          
-          .cards p {
-            color: #666;
-          }
-          
-          
-          
+          .buttonClose {
+            color: #283140 !important;
+            display: block;
+            margin-right: auto;
+          }         
           .create:hover {
-            background-color: #45a049;
-          }
-
-          
-            .apply {
-            background: #f436e1; /* Red */
-            color: white;
-            border: none;
-            cursor: pointer;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            margin: 4px 2px;
-            transition-duration: 0.4s;
-            margin-left:3.9rem;
-            border-radius: 1rem;
-          }
+            background-color: #161921;
+          }        
           .delete {
-            background: #f43639; /* Red */
+            position: relative;
+            top:-5rem;
+            left:11.2rem;
+            width:26.5%;
+            background: #ea4545; 
             color: white;
-            border: none;
+            border-color: #283140;
             cursor: pointer;
             padding: 15px 32px;
             text-align: center;
-            text-decoration: none;
             font-size: 16px;
             margin: 4px 2px;
             transition-duration: 0.4s;
             margin-left:3.9rem;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
           }
           .view{
-            background: #3d4dff; /* Red */
+            position: relative;
+            top:-9rem;
+            left:26rem;
+            background: #283140; 
             color: white;
             border: none;
             cursor: pointer;
-            padding: 15px 32px;
+            padding: 1rem 2rem;
             text-align: center;
             text-decoration: none;
-            font-size: 16px;
-            margin: 4px 2px;
+            font-size: 1rem;
             transition-duration: 0.4s;
-            margin-left:2.8rem;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
           }
           
           .delete:hover {
@@ -200,8 +163,17 @@
             color: white;
           }
 
+          .view:hover {
+            background: #1b212b; /* Darker red on hover */
+            color: white;
+          }
+
 .ongoingjobs{
   margin-top: 100px;
+}
+
+.photoWrapper{
+  width:30%;
 }
 
 .filterContainer{
@@ -262,42 +234,84 @@ width:400px;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  padding: 20px;
-  margin-top:100px;
+  padding: 4rem;
+  margin:4rem;
 }
 
 .cards {
   background-color: #fff;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 0.5rem;
+  width:60%;
+  padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
   transition: transform 0.3s ease-in-out;
   overflow: hidden;
 }
 
+.Jobcards {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  width:60%;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
 
+.Jobcards h3{
+  font-family: 'oswald';
+  font-size: 1rem;
+  color: #333;
+  font-weight: 300;
+  margin-left: 4rem;
+}
+
+.Jobcards h3.title{
+  font-family: 'oswald' ;
+  font-size: 2rem !important;
+  color: #333;
+  font-weight: 500;
+  margin-left: 4rem;
+}
 
 .cards h3 {
   font-family: 'oswald';
-  margin: 10px 0;
   font-size: 1rem;
   color: #333;
-  font-weight: 200;
+  font-weight: 400;
+  margin-left: 2rem;
 
+}
+.chip{
+  background-color: #3e4653 !important;
+  color: white !important;
+
+}
+.cards h3.specs {
+  font-family: 'oswald';
+  font-size: 1rem;
+  color: #333;
+  font-weight: 300;
+  margin-left: 2rem;
+  margin-bottom: 0.2rem; 
+}
+.photoWrapper h3.by{
+  margin-left: 9rem;
 }
 
 .cards h3.title{
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 500;
   margin-bottom: 1rem;
 
 }
 
 
 .apply {
-  background:  rgb(41, 112, 255);
+  background:  #283140;
   color: white;
   border: none;
   cursor: pointer;
@@ -305,7 +319,6 @@ width:400px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   margin-left:3.9rem;
   border-radius: 1rem;

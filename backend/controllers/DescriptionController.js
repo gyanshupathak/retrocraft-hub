@@ -7,12 +7,11 @@ const dir= './images';
 
 if (!fs.existsSync(dir)){
   fs.mkdirSync(dir);
-
 }
-
 
  //ADD PROFILE PHOTO LOGIC
  const storage = multer.diskStorage({
+  
     destination: (req, file, cb) => {
       cb(null,'images');
     },
@@ -20,7 +19,6 @@ if (!fs.existsSync(dir)){
       cb(null, uuidv4() + '-' + Date.now() + path.extname(file.originalname));
     }
    });
-  
    const fileFilter = (req, file, cb) => {
     const allowedFileTypes =[ 'image/jpeg', 'image/jpg', 'image/png'];
     if(allowedFileTypes.includes(file.mimetype)){
@@ -34,8 +32,11 @@ if (!fs.existsSync(dir)){
 
   module.exports.Description = [upload.single('profileImage'), async (req, res, next) => {
     try {
+
     const { username, description , contact ,userId } = req.body;
+
     const profileImage = req.file ? req.file.path : null;
+
     if(!username){
       return res.json({message:'Username is required'})
     }

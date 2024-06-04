@@ -8,7 +8,6 @@ import Avatar from '@mui/material/Avatar';
 const Description = () => {
   const navigate = useNavigate();
   const [inputValue, setInputValue] = useState({
-    
     username: "",
     description: "",
     profileImage: null,
@@ -16,7 +15,7 @@ const Description = () => {
   });
 
   const { username, description, profileImage ,contact} = inputValue;
-
+  
   const handleOnChange = (e) => {
     const { name, value } = e.target;
     setInputValue({
@@ -43,14 +42,15 @@ const Description = () => {
           profileImage: selectedFile,
         });
       }
+
+      input.remove();
+
     });
   
     // Trigger a click event on the hidden input
     document.body.appendChild(input); // Append input to the DOM
     input.click(); // Trigger the click event
   
-    // Remove the input element from the DOM after the user selects a file
-    input.remove();
   };
 
   
@@ -123,8 +123,6 @@ const Description = () => {
       <Avatar alt="User Profile"  style={{ marginLeft:'120px' ,width: '55px', height: '55px' }} onClick={handlePhoto}/>
         <h2 className="login-account">Describe Yourself</h2>
         <form onSubmit={handleSubmit}>
-          
-
           {profileImage && (
             <div>
               <img
@@ -166,50 +164,7 @@ const Description = () => {
             onChange={handleOnChange}
           />
         </div>
-        {/*<div>
-          <label htmlFor="jobProfile">JobProfile</label>
-          <input
-            type="text"
-            name="jobPprofile"
-            value={jobProfile}
-            placeholder="Add Your Job Profile"
-            onChange={handleOnChange}
-          />
-        </div>
-         <div>
-          <label htmlFor="previousJobs">Previous Jobs</label>
-          <input
-            type="text"
-            name="previousJobs"
-            value={previousJobs}
-            placeholder="Add drive link of your Portfolio"
-            onChange={handleOnChange}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="expectedPaygrade">Expected Paygrade</label>
-          <input
-            type="text"
-            name="expectedPaygrade"
-            value={expectedPaygrade}
-            placeholder="Your expected paygrade"
-            onChange={handleOnChange}
-          />
-        </div>
-
-        <div>
-          <label htmlFor="previousProjects">Projects</label>
-          <input
-            type="text"
-            name="previousProjects"
-            value={previousProjects}
-            placeholder="Add drive link of your Portfolio"
-            onChange={handleOnChange}
-          />
-        </div>
-
-         */}
+        
 
         <button type="submit">Submit</button>
       </form>

@@ -40,9 +40,7 @@ const Login = () => {
         { withCredentials: true }
       );
       const { success, message , token , role ,user } = data;
-      console.log(data);
       if (success) {
-        console.log("Response:", data);
         if (user) {
           localStorage.setItem('_id', user._id);
           // Store the token in the session storage

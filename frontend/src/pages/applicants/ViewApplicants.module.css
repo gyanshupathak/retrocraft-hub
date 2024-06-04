@@ -1,18 +1,32 @@
-.viewApplicantsContainer ul {
-  margin-top: 200px;
-  width:20%;
 
-
-}
 .viewApplicantsContainer{
- margin-left:40rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 4rem;
+  margin:4rem;
 }
+
+.noData{
+  width:40%;
+  display: flex;
+  justify-content: center;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  margin-left: 26rem;
+
+}
+
 .errorMessage {
   color: red;
 }
 
 .applicantsContainer {
-  margin-top: 20px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
 .applicantsContainer h2 {
@@ -20,22 +34,70 @@ font-family: 'oswald';
 font-weight: 400;
 }
 
-.applicantsContainer p {
+.photoWrapper{
+  width:80%;
+}
+
+.profilePhoto {
+  width: 20rem; 
+  height: 14rem; 
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.buttons{
+  margin-bottom: 3rem;
+  width: 20%;
+  margin-right: 20%;
+}
+.applicantData{
+  display:flex;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  width:60%;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+
+}
+
+
+.applicantsContainer h3 {
   font-family: 'oswald';
-  font-weight: 200;
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+.specs{
+  width:30%;
+  font-family: 'oswald';
+  font-weight: 300;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+
 }
 
 .applicantsContainer .acceptButton {
+  margin-top:5rem !important;
   font-family: 'oswald';
   font-weight: 400;
   background-color:green;
   color:white;
+  margin-left: 12rem;
+  padding:0.6rem;
+  border-radius: 0.4rem;
 }
-.applicantsContainer .rejectButton{
+.rejectButton{
+  margin-left: 12.1rem !important  ;
+  margin-top: 0.5rem !important;
   font-family: 'oswald';
   font-weight: 400;
   background-color:red;
   color:white;
+  padding:0.6rem;
+  border-radius: 0.4rem;
 }
 
 

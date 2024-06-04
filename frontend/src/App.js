@@ -9,15 +9,16 @@ import Signup from "./pages/signUp/Signup";
 import Description from "./pages/description/Desc";
 import ProfileFreelancer from "./pages/profile/ProfileFreelancer";
 import ProfileProducer from "./pages/profile/ProfileProducer";
-import { createContext } from "react";
 import ViewApplicants from "./pages/applicants/ViewApplicants";
+import Messages from "./components/chat/Messages";
+import { useEffect } from "react";
 
- 
-
-export const SetPopupContext = createContext();
 
 function App() {
 
+  useEffect(() => {
+
+  }, []);
   return (
     <div className="App">
       <Routes>
@@ -32,9 +33,7 @@ function App() {
         <Route path="/profileproducer" element={<ProfileProducer />} />
         <Route path="/people" element={<People />} />
         <Route path="/viewapplicants/:jobId" element={<ViewApplicants />} />
-
-
-
+        <Route path="/messages" element={<Messages  />}  />
       </Routes>
     </div>
   );

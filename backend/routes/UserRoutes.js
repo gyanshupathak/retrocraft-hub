@@ -13,7 +13,6 @@ router.post("/",userVerification , async (req, res) => {
         res.send(user);
     } catch (error) {
         res.send("An error occured");
-        console.log(error);
     }
 });
 

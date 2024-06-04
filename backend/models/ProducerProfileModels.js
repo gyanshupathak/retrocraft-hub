@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 const User = require("./UserModels");
 
 const producerProfileSchema = new mongoose.Schema({
-  email: {
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User', // Reference to the User model
+    ref: 'User', 
   },
+  
   username: {
     type: String,
     required: [true, "your username is required"],
@@ -21,10 +22,7 @@ const producerProfileSchema = new mongoose.Schema({
     type:Number,
     default:""
   },
-  userId: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User' // Reference to the User model
-},
+  
   
 });
 

@@ -3,46 +3,119 @@
 }
 
 .profileSection {
-  margin-top: 7rem;
-  margin-left: 1rem;
-  text-align: center;
+  background-color: #ffffff;
+  width: 60%;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container{ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+
+
 }
 
 
+.profileHeader {
+  background-color: #001028;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  position: relative; 
+}
 
 .profilePhoto {
-  width: 20%;
-  object-fit: cover; 
-  border-radius: 50% ; 
-  border:solid 0.2rem rgb(71, 71, 71);
+  width: 15rem; 
+  height: 15rem; 
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #283140;
+  position: absolute; 
+  bottom: 40%;
+  left: 25%; 
 }
+
+.photoWrapper {
+  z-index: 1;
+  margin-bottom: 3rem;
+}
+
+
+.profileDetails {
+ 
+  gap: 2rem;
+  padding: 2rem;
+
+}
+
 
 .profileDetails p{
   font-family:'oswald';
   margin-top: 0.2rem;
+  margin-left: 4rem;
+  margin: 1rem;
+  color: #283140;
+
 }
 
+.photo{
+  margin-left:6.5rem;
+}
+
+.photoProfile{
+    position:absolute;
+    top:1.15rem;
+    left:7.78rem;
+    width: 2.55rem;
+    height: 2.55rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; }
+
+
+
 .editButton {
-  background-color: rgb(41, 112, 255);
-  height: 2.5rem;
-  width: 30%;
-  font-family: 'Oswald', sans-serif;
-  border-radius: 0.3rem;
-  color: rgb(255, 255, 255);
-  padding: 0.5rem 1rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
+  background-color: #283140;
+  color: #fff;
+  padding: 10px 20px ;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+  margin-top: 2rem;
+  margin-left: 18rem;
 }
 
 .editButton:hover {
-  background-color: rgb(61, 132, 255);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  background-color: #161d2a;
 }
 
 
 .popupForm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border:solid 0.1rem rgb(177, 177, 177);
+  border-radius: 3%;
+}
+
+.popupFormProducer {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -65,10 +138,12 @@
   width: 100%;
   padding: 8px;
   margin-bottom: 10px;
+  background-color: #cdcdcd;
+  border-radius: 10px;
 }
 
 .popupForm button {
-  background-color: #007bff;
+  background-color: #283140;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -76,7 +151,34 @@
 }
 
 .popupForm button:hover {
-  background-color: #0056b3;
+  background-color: #161d2a;
+}
+
+.popupFormProducer label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: 'oswald';
+}
+
+.popupFormProducer input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  background-color: #cdcdcd;
+  border-radius: 10px;
+}
+
+.popupFormProducer button {
+  background-color: #283140;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  gap: 0;
+}
+
+.popupFormProducer button:hover {
+  background-color: #161d2a;
 }
 
 
@@ -89,4 +191,19 @@
 }
 .submitButton{
   border-radius: 5%;
+}
+
+.username{
+  font-family: 'oswald';
+  font-size: 50px;
+  color: #283140;
+}
+
+.line {
+  border: none;
+  border-top: 1px solid #ebebeb;
+  color: #ebebeb;
+  background-color: #ebebeb; 
+  height: 1px;
+  width: 100%;
 }
