@@ -4,6 +4,9 @@ import App from './App';
 import { BrowserRouter} from 'react-router-dom';
 import './index.css';
 import 'react-toastify/dist/ReactToastify.css';
+import {disableReactDevTools} from '@fvilers/disable-react-devtools' ;
+
+if(process.env.NODE_ENV === 'production') disableReactDevTools();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
