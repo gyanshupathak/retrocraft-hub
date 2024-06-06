@@ -43,9 +43,11 @@
     "web-extensions": "0.1.5"  
   },
   "scripts": {
+    "postinstall": "chmod -R 755 node_modules/.bin && chmod -R 755 node_modules/react-scripts",
+    "build": "./build.sh",
+    "vercel-build": "./vercel-build.sh",
     "preinstall": "npx npm-force-resolutions",
     "start": "react-scripts start",
-    "build": "npx react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
