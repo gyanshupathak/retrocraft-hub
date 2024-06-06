@@ -40,7 +40,7 @@
     "web-vitals": "^2.1.4"
   },
   "resolutions": {
-    "web-extensions": "0.1.5"  
+    "web-extensions": "0.1.5"
   },
   "scripts": {
     "postinstall": "chmod -R 755 node_modules/.bin && chmod -R 755 node_modules/react-scripts",
@@ -70,6 +70,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "tailwindcss": "^3.4.0"
   }
 }
